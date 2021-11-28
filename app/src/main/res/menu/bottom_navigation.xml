@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@mipmap/homeactive"
+        android:title=""/>
+    <item
+        android:id="@+id/cart"
+        android:icon="@mipmap/cartactive"
+        android:title=""/>
+    <item
+        android:id="@+id/orders"
+        android:icon="@mipmap/ordersactive"
+        android:title=""/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@mipmap/profileinactive"
+        android:title=""/>
+</menu>

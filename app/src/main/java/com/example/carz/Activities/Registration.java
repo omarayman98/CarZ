@@ -1,6 +1,4 @@
-package com.example.carz;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.carz.Activities;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -13,13 +11,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.carz.Classes.BottomSheet;
+import com.example.carz.R;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class Registration extends AppCompatActivity {
-    boolean forget_pass =false;
+public class Registration extends AppCompatActivity implements BottomSheet.BottomSheetListener{
     boolean SIGNIN_MODE =false;
     Button signIn_Out_btn;
     LinearLayout terms_Layout;
+    LinearLayout activationCode_PopUP;
     boolean termsCheckBox =false;
     TextInputLayout name,phoneNum,password,confirm_password;
     TextView forget_password,Page_Label,to_signIn_et,haveAccount_et;
@@ -34,6 +36,8 @@ public class Registration extends AppCompatActivity {
         password=findViewById(R.id.textField_password);
         confirm_password=findViewById(R.id.textField_confirm_password);
         signIn_Out_btn=findViewById(R.id.signIn_Out_btn);
+        //On Activation
+        activationCode_PopUP=findViewById(R.id.ActivationPopUp);
         //Sign in Mode Labels
         Page_Label=findViewById(R.id.Page_Label);
         forget_password=findViewById(R.id.forget_password);
@@ -54,8 +58,6 @@ public class Registration extends AppCompatActivity {
     }
 
 
-
-
     public void InRegistration(View view) {
         switch (view.getId()){
             case R.id.checkbox_SignUp:
@@ -74,6 +76,11 @@ public class Registration extends AppCompatActivity {
                 break;
 
             case R.id.signIn_Out_btn:
+                Intent  to_WashServices= new Intent(this, MainActivity.class);
+                startActivity(to_WashServices);
+                overridePendingTransition( R.anim.slide_in_top, R.anim.slide_out_down );
+//                BottomSheet bottomSheet =new BottomSheet();
+//                bottomSheet.show(getSupportFragmentManager(),"TAG");
 
                 break;
 
@@ -97,7 +104,6 @@ public class Registration extends AppCompatActivity {
                     //Sign In Mode
                     forget_password.animate().translationX(0).translationY(0).setDuration(100);
                     forget_password.setText("");
-
                     Page_Label.setText("SIGN UP");
                     to_signIn_et.setText("SIGN UP");
                     haveAccount_et.setText("Have Account?");
@@ -110,11 +116,13 @@ public class Registration extends AppCompatActivity {
                     terms_Layout.setVisibility(view.VISIBLE);
                     SIGNIN_MODE =false;
                 }
-
             break;
-
-
         }
+
     }
 
+    @Override
+    public void onButtonClicked(String text) {
+
+    }
 }

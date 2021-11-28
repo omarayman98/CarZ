@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    tools:context=".Activities.Registration">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,18 +23,16 @@
         android:layout_width="match_parent"
         android:layout_height="214dp"
         android:background="#66000000"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="139dp"
         android:layout_height="52dp"
-        android:layout_gravity="center"
-        android:src="@mipmap/carzlogo"
         android:layout_marginTop="64dp"
+        android:src="@mipmap/carzlogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
-        android:background="@drawable/curved_layout"
+        android:background="@drawable/curved_top_white_layout"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,10 +211,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agree to "
                 android:paddingLeft="24dp"
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
+                android:text="Agree to "
                 android:textColor="#B2B2B2"
                 android:textSize="14dp"
                 android:textStyle="bold" />
@@ -259,24 +257,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout_terms" />
+
         <TextView
             android:id="@+id/forget_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:textColor="#1C1C1C"
             android:gravity="center"
-            />
+            android:textColor="#1C1C1C"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/signIn_Out_Layout"
-        android:layout_width="match_parent"
+        android:layout_width="324dp"
         android:layout_height="wrap_content"
-        android:onClick="InRegistration"
         android:background="@drawable/curved_layout_gray"
         android:gravity="center"
+        android:onClick="InRegistration"
         android:orientation="vertical"
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -302,7 +302,6 @@
             android:textSize="16dp"
             android:textStyle="bold" />
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
