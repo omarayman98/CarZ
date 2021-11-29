@@ -203,18 +203,6 @@
                 android:background="@drawable/curved_layout_red">
 
                 <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Routine"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,8 +212,23 @@
                     android:textColor="#FFFFFF"
                     android:textSize="10dp"
                     android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Routine"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -276,7 +279,7 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="225+dp"
+                android:layout_height="223dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/curved_top_black_layout">
 

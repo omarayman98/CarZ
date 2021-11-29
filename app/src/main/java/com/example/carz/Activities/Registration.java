@@ -75,12 +75,15 @@ public class Registration extends AppCompatActivity implements BottomSheet.Botto
                 startActivity(TermsLink);
                 break;
 
-            case R.id.signIn_Out_btn:
+            case R.id.signIn_Out_btn:if (SIGNIN_MODE){
                 Intent  to_WashServices= new Intent(this, MainActivity.class);
                 startActivity(to_WashServices);
                 overridePendingTransition( R.anim.slide_in_top, R.anim.slide_out_down );
-//                BottomSheet bottomSheet =new BottomSheet();
-//                bottomSheet.show(getSupportFragmentManager(),"TAG");
+            }else{
+                BottomSheet bottomSheet =new BottomSheet();
+                bottomSheet.show(getSupportFragmentManager(),"TAG");
+            }
+
 
                 break;
 
@@ -90,8 +93,8 @@ public class Registration extends AppCompatActivity implements BottomSheet.Botto
                     Page_Label.setText("SIGN IN");
                     haveAccount_et.setText("Create new Account");
                     to_signIn_et.setText("SIGN UP");
-                    signIn_Out_btn.setText("CREATE ACCOUNT");
                     forget_password.setText("FORGOT PASSWORD?");
+                    signIn_Out_btn.setText("SIGN IN");
                     name.setVisibility(view.INVISIBLE);
                     confirm_password.setVisibility(view.INVISIBLE);
                     terms_Layout.setVisibility(view.INVISIBLE);
@@ -107,7 +110,7 @@ public class Registration extends AppCompatActivity implements BottomSheet.Botto
                     Page_Label.setText("SIGN UP");
                     to_signIn_et.setText("SIGN UP");
                     haveAccount_et.setText("Have Account?");
-                    signIn_Out_btn.setText("SIGN IN");
+                    signIn_Out_btn.setText("CREATE ACCOUNT");
                     phoneNum.animate().translationX(0).translationY(0).setDuration(100);
                     password.animate().translationX(0).translationY(0).setDuration(100);
                     signIn_Out_btn.animate().translationX(0).translationY(0).setDuration(100);

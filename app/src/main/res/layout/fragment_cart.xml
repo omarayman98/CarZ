@@ -7,64 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.CartFragment" >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="165dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/curved_layout_yellow"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:id="@+id/first_order_discount"
-                android:layout_width="173dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/curved_white_layout"
-                android:gravity="center"
-                android:text="   Get 25% Off on your first order   "
-                android:textColor="#C73E1D"
-                android:textSize="10dp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="29dp"
-                android:src="@mipmap/servicesicon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:text="Click here to explore"
-                android:textColor="#99000000"
-                android:textSize="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="27dp"
-                android:text="Wash services"
-                android:textColor="#000000"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:text="\n\n\n                     CART"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
