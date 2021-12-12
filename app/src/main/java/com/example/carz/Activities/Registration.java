@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.carz.Classes.BottomSheet;
 import com.example.carz.R;
+import com.example.carz.databinding.ActivityRegestrationBinding;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class Registration extends AppCompatActivity implements BottomSheet.BottomSheetListener{
@@ -26,10 +27,18 @@ public class Registration extends AppCompatActivity implements BottomSheet.Botto
     TextInputLayout name,phoneNum,password,confirm_password;
     TextView forget_password,Page_Label,to_signIn_et,haveAccount_et;
     ImageView checkbox;
+
+    ActivityRegestrationBinding  binding;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regestration);
+        binding=ActivityRegestrationBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+
+
         checkbox=findViewById(R.id.checkbox_SignUp);
         name=findViewById(R.id.textField_name);
         phoneNum=findViewById(R.id.textField_phone);
@@ -59,6 +68,17 @@ public class Registration extends AppCompatActivity implements BottomSheet.Botto
 
 
     public void InRegistration(View view) {
+
+//        if (view==binding.checkboxSignUp){
+//            if (!termsCheckBox){
+//                checkbox.setImageResource(R.mipmap.checkboxfilled);
+//                termsCheckBox =true;
+//            }else {
+//                checkbox.setImageResource(R.mipmap.checkbox);
+//                termsCheckBox =false;
+//            }
+//        }
+
         switch (view.getId()){
             case R.id.checkbox_SignUp:
                 if (!termsCheckBox){
